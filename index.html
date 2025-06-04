@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twentea Coffee | Bhopal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #f8f1e9;
+            overflow-x: hidden;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #2b2b2b;
+            padding: 1rem;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d4a373;
+        }
+        section {
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2b2b2b;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        p {
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://via.placeholder.com/1920x1080?text=Twentea+Coffee+Banner');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            transform: translateZ(-1px) scale(1.5);
+            z-index: -1;
+            filter: brightness(0.7);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .parallax-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        .parallax-bg::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 0;
+            width: 100%;
+            height: 140%;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        #about.parallax-bg::before {
+            background-image: url('https://via.placeholder.com/1920x1080?text=About+Background');
+        }
+        #process.parallax-bg::before {
+            background-image: url('https://via.placeholder.com/1920x1080?text=Process+Background');
+        }
+        #serving.parallax-bg::before {
+            background-image: url('https://via.placeholder.com/1920x1080?text=Serving+Background');
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .links a {
+            color: #d4a373;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #b08968;
+        }
+        footer {
+            background-color: #2b2b2b;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#serving">Serving</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Twentea Coffee</h1>
+            <p>Aesthetic Coffee Experience in Bhopal</p>
+        </div>
+    </section>
+    <section id="about" class="parallax-bg">
+        <h2>About Twentea Coffee</h2>
+        <p>Twentea Coffee brings a unique blend of aesthetic ambiance and exceptional coffee to Bhopal. With two stunning outlets in Arera Colony and [Second Outlet Location], we invite you to savor the art of coffee in a serene, modern setting.</p>
+    </section>
+    <section id="process" class="parallax-bg">
+        <h2>Our Coffee Process</h2>
+        <p>From sourcing premium beans to crafting the perfect brew, our process is rooted in passion and precision. [Describe bean sourcing, roasting, or brewing methods here.]</p>
+    </section>
+    <section id="serving" class="parallax-bg">
+        <h2>How & Where We Serve</h2>
+        <p>Experience warm hospitality and meticulously crafted drinks at our Arera Colony outlet or our [Second Outlet Location]. [Describe service style, ambiance, or outlet details.]</p>
+    </section>
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://via.placeholder.com/300?text=Outlet+1" alt="Outlet 1">
+            <img src="https://via.placeholder.com/300?text=Outlet+2" alt="Outlet 2">
+            <img src="https://via.placeholder.com/300?text=Coffee+Art" alt="Coffee Art">
+            <img src="https://via.placeholder.com/300?text=Ambiance" alt="Ambiance">
+        </div>
+        <div class="links">
+            <a href="https://www.instagram.com/twenteacoffee" target="_blank">Instagram</a>
+            <a href="https://g.page/twenteacoffee" target="_blank">Google Business</a>
+            <a href="https://www.zomato.com/bhopal/twentea-coffee-arera-colony" target="_blank">Zomato</a>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Twentea Coffee. All rights reserved.</p>
+    </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
